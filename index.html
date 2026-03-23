@@ -1039,6 +1039,20 @@
       .btn { width: 100%; }
       .hero-actions .btn { width: auto; }
     }
+    .contact-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 24px;
+  }
+
+  .testimonial-strip {
+    margin-top: 50px;
+    padding: 24px 26px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, #0f172a 0%, #132238 100%);
+    color: white;
+    box-shadow: 0 28px 70px -48px rgba(15,23,42,0.45);
+  }
   </style>
 </head>
 <body>
@@ -1417,7 +1431,7 @@
               </div>
               <div>
                 <strong>Studio</strong>
-                <span>Venafro, IS</span>
+                <span>Via De Utris, 16, Venafro, IS</span>
               </div>
             </div>
           </div>
@@ -1425,7 +1439,7 @@
 
         <div class="contact-form-wrap">
           <div class="section-kicker" style="color:#94a3b8;">Primo contatto</div>
-          <h2>Parlami della tua richiesta.</h2>
+          <h2>Spiegami di cosa hai bisogno.</h2>
 
           <form action="https://formspree.io/f/mbdznjva" method="POST">
   <div class="form-row">
@@ -1463,16 +1477,16 @@
 
   <button class="btn btn-secondary" type="submit">Invia richiesta</button>
 </form> 
-        <div style="height: 140px;"></div>
-        </div>
       </div>
+        <div class="container">
+    <div class="testimonial-strip">
     <section class="section alt" id="immagini">
       <div class="container">
         <div class="section-head">
           <div class="section-kicker">Immagini</div>
-          <h2>Lavori, studio e dettagli tecnici raccontano meglio il tuo profilo professionale.</h2>
+          <h2>Attività, studio e aspetti operativi del lavoro tecnico.</h2>
           <p>
-            Ho sostituito i riquadri provvisori con tre immagini reali: un intervento seguito, l’ingresso dello studio e un dettaglio operativo del lavoro tecnico quotidiano. Così il sito acquista credibilità vera, non costruita.
+          Una selezione di immagini riferite all’attività dello studio, agli interventi seguiti e al contesto operativo quotidiano.
           </p>
         </div>
 
@@ -1494,7 +1508,7 @@
               <img src="./studio.png" alt="Ingresso dello Studio Tecnico D'Andrea" style="width: 100%; height: 260px; object-fit: cover; display: block;" />
               <div style="padding: 18px 18px 20px;">
                 <strong style="display: block; font-size: 18px; line-height: 1.3; color: var(--text);">Lo studio</strong>
-                <span style="display: block; margin-top: 8px; font-size: 14px; line-height: 1.75; color: var(--muted);">L’ingresso dello studio rafforza l’identità del professionista e rende il sito più autentico e riconoscibile.</span>
+                <span style="display: block; margin-top: 8px; font-size: 14px; line-height: 1.75; color: var(--muted);">L’ingresso dello studio professionale, sede dell’attività tecnica e luogo in cui vengono impostati, seguiti e approfonditi gli incarichi connessi alla pratica quotidiana.</span>
               </div>
             </article>
 
@@ -1513,7 +1527,7 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div><strong>Studio Tecnico D'Andrea</strong> — Sito professionale per pratiche, consulenze e servizi tecnici.</div>
+      <div><strong>Studio Tecnico D'Andrea</strong> — Geometra che si occupa di pratiche, consulenze e servizi tecnici.</div>
       <div class="footer-links">
         <a href="#servizi">Servizi</a>
         <a href="#studio">Studio</a>
