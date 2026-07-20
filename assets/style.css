@@ -275,7 +275,7 @@ a {
 
 .header-inner {
   display: flex;
-  min-height: 82px;
+  min-height: 88px;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
@@ -289,23 +289,25 @@ a {
 }
 
 .brand-mark {
-  display: grid;
-  width: 44px;
-  height: 44px;
-  place-items: center;
-  color: var(--white);
-  background: var(--ink);
-  border-radius: 50% 50% 50% 16px;
+  display: block;
+  width: 238px;
+  height: 66px;
+  background: transparent url("../logo-studio-tecnico-dandrea.png") no-repeat center / contain;
 }
 
 .brand-mark svg {
-  width: 26px;
-  height: 26px;
+  display: none;
 }
 
 .brand-copy {
-  display: grid;
-  gap: 1px;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .brand-copy small {
@@ -344,11 +346,6 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.header-phone {
-  font-size: 13px;
-  font-weight: 800;
 }
 
 .menu-toggle {
@@ -1011,6 +1008,38 @@ a {
   font-size: 11px;
 }
 
+.form-status {
+  min-height: 24px;
+  margin: 0;
+  padding: 10px 12px;
+  color: var(--muted);
+  background: #f5f7f8;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.form-status:empty {
+  display: none;
+}
+
+.form-status[data-state="success"] {
+  color: #15543f;
+  background: #eaf7f1;
+}
+
+.form-status[data-state="error"] {
+  color: #8b2e2e;
+  background: #fff0f0;
+}
+
+.honeypot {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
 .site-footer {
   color: #c7d2dc;
   background: #071421;
@@ -1024,8 +1053,11 @@ a {
 }
 
 .footer-brand .brand-mark {
-  color: var(--ink);
-  background: var(--gold-2);
+  width: 280px;
+  height: 104px;
+  background-color: var(--white);
+  background-size: calc(100% - 24px) auto;
+  border-radius: 16px;
 }
 
 .footer-brand .brand-copy small {
@@ -1076,6 +1108,51 @@ a {
 
 .footer-bottom a {
   text-decoration: underline;
+}
+
+.cookie-notice {
+  position: fixed;
+  z-index: 3000;
+  right: 22px;
+  bottom: 22px;
+  display: grid;
+  width: min(calc(100% - 44px), 460px);
+  gap: 14px;
+  padding: 20px;
+  color: var(--white);
+  background: #071421;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 18px;
+  box-shadow: var(--shadow-lg);
+}
+
+.cookie-notice h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+}
+
+.cookie-notice p {
+  margin: 0;
+  color: #c7d2dc;
+  font-size: 12px;
+}
+
+.cookie-notice a {
+  color: var(--gold-2);
+  text-decoration: underline;
+}
+
+.cookie-notice__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cookie-notice__actions .btn {
+  min-height: 42px;
+  padding: 10px 17px;
 }
 
 .mobile-cta {
@@ -1324,15 +1401,15 @@ a {
 }
 
 @media (max-width: 1080px) {
+  .brand-mark {
+    width: 208px;
+  }
+
   .desktop-nav {
     gap: 16px;
   }
 
   .desktop-nav a:nth-last-child(-n+2) {
-    display: none;
-  }
-
-  .header-phone {
     display: none;
   }
 
@@ -1368,8 +1445,7 @@ a {
   }
 
   .desktop-nav,
-  .header-actions .btn,
-  .header-actions .header-phone {
+  .header-actions .btn {
     display: none;
   }
 
@@ -1380,10 +1456,10 @@ a {
   .mobile-menu {
     position: fixed;
     z-index: 999;
-    inset: 82px 0 auto;
+    inset: 88px 0 auto;
     display: grid;
     gap: 3px;
-    max-height: calc(100vh - 82px);
+    max-height: calc(100vh - 88px);
     padding: 18px 20px 26px;
     overflow-y: auto;
     background: var(--paper);
@@ -1473,12 +1549,12 @@ a {
   }
 
   .header-inner {
-    min-height: 74px;
+    min-height: 76px;
   }
 
   .mobile-menu {
-    inset: 74px 0 auto;
-    max-height: calc(100vh - 74px);
+    inset: 76px 0 auto;
+    max-height: calc(100vh - 76px);
   }
 
   .brand-copy strong {
@@ -1490,8 +1566,8 @@ a {
   }
 
   .brand-mark {
-    width: 40px;
-    height: 40px;
+    width: 188px;
+    height: 58px;
   }
 
   .display {
@@ -1590,6 +1666,25 @@ a {
 
   .footer-bottom {
     display: grid;
+  }
+
+  .footer-brand .brand-mark {
+    width: min(100%, 280px);
+  }
+
+  .cookie-notice {
+    right: 14px;
+    bottom: 14px;
+    width: calc(100% - 28px);
+  }
+
+  .cookie-notice__actions {
+    display: grid;
+    justify-content: stretch;
+  }
+
+  .cookie-notice__actions .btn {
+    width: 100%;
   }
 
   .page-hero {

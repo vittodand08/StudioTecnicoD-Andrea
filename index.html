@@ -21,7 +21,7 @@
     "@type": "ProfessionalService",
     "name": "Studio Tecnico D'Andrea",
     "url": "https://studiotecnicodandrea.it/",
-    "logo": "https://studiotecnicodandrea.it/Logo_studio_tecnico_dandrea.png",
+    "logo": "https://studiotecnicodandrea.it/logo-studio-tecnico-dandrea.png",
     "image": "https://studiotecnicodandrea.it/studio.webp",
     "telephone": "+39 347 961 8016",
     "email": "studiotecnicogeomdandrea@gmail.com",
@@ -66,7 +66,6 @@
       </nav>
 
       <div class="header-actions">
-        <a class="header-phone" href="tel:+393479618016">347&nbsp;961&nbsp;8016</a>
         <a class="btn btn--primary" href="#contatti">Valuta il tuo caso</a>
         <button class="menu-toggle" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="menu-mobile" data-menu-button><span></span></button>
       </div>
@@ -323,7 +322,8 @@
           <h2>Richiedi una valutazione preliminare.</h2>
           <p>Compila i campi essenziali. Non inviare documenti sensibili tramite questo modulo.</p>
 
-          <form class="contact-form" action="https://formspree.io/f/mbdznjva" method="post">
+          <form class="contact-form" action="https://formspree.io/f/mbdznjva" method="post" data-contact-form>
+            <div class="honeypot" aria-hidden="true"><label for="azienda">Lascia vuoto questo campo</label><input id="azienda" name="_gotcha" type="text" tabindex="-1" autocomplete="off"></div>
             <div class="form-row">
               <div class="field"><label for="nome">Nome e cognome</label><input id="nome" name="nome" type="text" autocomplete="name" required></div>
               <div class="field"><label for="telefono">Telefono</label><input id="telefono" name="telefono" type="tel" autocomplete="tel" required></div>
@@ -346,9 +346,10 @@
               </div>
             </div>
             <div class="field"><label for="messaggio">Descrivi brevemente il caso</label><textarea id="messaggio" name="messaggio" placeholder="Cosa vuoi ottenere? Quali documenti possiedi già?" required></textarea></div>
-            <label class="consent"><input type="checkbox" name="consenso_privacy" required><span>Ho letto l'<a href="privacy.html">informativa sulla privacy</a> e autorizzo il trattamento dei dati per ricevere risposta alla richiesta.</span></label>
+            <label class="consent"><input type="checkbox" name="privacy_presa_visione" value="sì" required><span>Dichiaro di aver letto l'<a href="privacy.html">informativa sulla privacy</a> e chiedo allo Studio di ricontattarmi in merito alla richiesta.</span></label>
             <input type="hidden" name="_subject" value="Nuova richiesta dal sito Studio Tecnico D'Andrea">
             <button class="btn btn--primary" type="submit">Invia la richiesta</button>
+            <p class="form-status" role="status" aria-live="polite" data-form-status></p>
             <p class="form-note">L'invio del modulo non costituisce accettazione dell'incarico né conferma della fattibilità tecnica.</p>
           </form>
         </div>
@@ -379,6 +380,7 @@
         <a href="mailto:studiotecnicogeomdandrea@gmail.com">Scrivi una email</a>
         <span>Via De Utris 16<br>86079 Venafro (IS)</span>
         <a href="privacy.html">Privacy</a>
+        <a href="cookie-policy.html">Cookie</a>
       </div>
     </div>
     <div class="container footer-bottom">
