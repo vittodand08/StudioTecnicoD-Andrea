@@ -1476,6 +1476,20 @@ a {
   line-height: 1.1;
 }
 
+.appointment-band {
+  margin-top: 54px;
+}
+
+.appointment-band__copy > p:last-child {
+  max-width: 650px;
+  margin: 13px 0 0;
+  color: #c9d5df;
+}
+
+.appointment-band > .btn {
+  flex: 0 0 auto;
+}
+
 .legal h1 {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
