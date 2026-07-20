@@ -219,6 +219,48 @@
       </div>
     </section>
 
+    <section class="section section--soft" id="guide">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Guide tecniche</p>
+            <h2 class="section-title">Risposte chiare alle domande che precedono una decisione importante.</h2>
+          </div>
+          <p>Contenuti pratici, aggiornati e collegati a un servizio reale: per capire il problema e sapere quando serve una verifica professionale.</p>
+        </div>
+
+        <div class="intent-grid">
+          <a class="intent-card" href="stato-legittimo-immobile.html">
+            <span class="intent-number">01</span>
+            <h3>Stato legittimo dell'immobile</h3>
+            <p>Cos'è, quali documenti lo ricostruiscono e perché va controllato prima di vendere, acquistare o intervenire.</p>
+            <span class="text-link">Leggi la guida</span>
+          </a>
+
+          <a class="intent-card" href="difformita-urbanistica-catastale.html">
+            <span class="intent-number">02</span>
+            <h3>Difformità urbanistica o catastale?</h3>
+            <p>Due verifiche diverse, spesso confuse. Capire la differenza evita aggiornamenti inutili o incompleti.</p>
+            <span class="text-link">Capisci la differenza</span>
+          </a>
+
+          <a class="intent-card" href="verifica-immobile-prima-acquisto.html">
+            <span class="intent-number">03</span>
+            <h3>Prima di comprare casa</h3>
+            <p>Una verifica tecnica preventiva aiuta a individuare documenti mancanti, difformità e lavori da valutare.</p>
+            <span class="text-link">Verifica cosa controllare</span>
+          </a>
+
+          <a class="intent-card" href="consulenza-tecnica-online.html">
+            <span class="intent-number">04</span>
+            <h3>Geometra online</h3>
+            <p>Un primo confronto da tutta Italia per esaminare il quesito, ordinare i documenti e definire i prossimi passi.</p>
+            <span class="text-link">Scopri la consulenza</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="studio">
       <div class="container profile-grid">
         <figure class="profile-media">
@@ -413,7 +455,7 @@
               <div class="field"><label for="comune">Comune dell'immobile</label><input id="comune" name="comune_immobile" type="text" required></div>
               <div class="field">
                 <label for="servizio">Di cosa hai bisogno?</label>
-                <select id="servizio" name="servizio" required>
+                <select id="servizio" name="servizio" required data-service-select>
                   <option value="">Seleziona</option>
                   <option>Sanatoria o difformità</option>
                   <option>Vendita o acquisto immobile</option>
@@ -428,6 +470,7 @@
             <div class="field"><label for="messaggio">Descrivi brevemente il caso</label><textarea id="messaggio" name="messaggio" placeholder="Cosa vuoi ottenere? Quali documenti possiedi già?" required></textarea></div>
             <label class="consent"><input type="checkbox" name="privacy_presa_visione" value="sì" required><span>Dichiaro di aver letto l'<a href="privacy.html">informativa sulla privacy</a> e chiedo allo Studio di ricontattarmi in merito alla richiesta.</span></label>
             <input type="hidden" name="_subject" value="Nuova richiesta dal sito Studio Tecnico D'Andrea">
+            <input type="hidden" name="pagina_provenienza" value="Homepage" data-source-page>
             <button class="btn btn--primary" type="submit">Invia la richiesta</button>
             <p class="form-status" role="status" aria-live="polite" data-form-status></p>
             <p class="form-note">L'invio del modulo non costituisce accettazione dell'incarico né conferma della fattibilità tecnica.</p>
