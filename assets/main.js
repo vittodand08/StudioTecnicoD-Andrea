@@ -33,6 +33,34 @@ const contactForm = document.querySelector('[data-contact-form]');
 if (contactForm && window.fetch) {
   const status = contactForm.querySelector('[data-form-status]');
   const submitButton = contactForm.querySelector('[type="submit"]');
+  const sourceField = contactForm.querySelector('[data-source-page]');
+  const serviceSelect = contactForm.querySelector('[data-service-select]');
+
+  try {
+    const referrer = document.referrer ? new URL(document.referrer) : null;
+    const internalPath = referrer && referrer.origin === window.location.origin ? referrer.pathname : '';
+    const sourceMap = {
+      '/sanatorie-edilizie.html': 'Sanatorie edilizie',
+      '/stato-legittimo-immobile.html': 'Stato legittimo immobile',
+      '/difformita-urbanistica-catastale.html': 'Difformità urbanistica e catastale',
+      '/conformita-urbanistica-catastale.html': 'Conformità urbanistica e catastale',
+      '/verifica-immobile-prima-acquisto.html': 'Verifica immobile prima acquisto',
+      '/consulenza-tecnica-online.html': 'Geometra online'
+    };
+    const serviceMap = {
+      '/sanatorie-edilizie.html': 'Sanatoria o difformità',
+      '/stato-legittimo-immobile.html': 'Sanatoria o difformità',
+      '/difformita-urbanistica-catastale.html': 'Sanatoria o difformità',
+      '/conformita-urbanistica-catastale.html': 'Vendita o acquisto immobile',
+      '/verifica-immobile-prima-acquisto.html': 'Vendita o acquisto immobile',
+      '/consulenza-tecnica-online.html': 'Consulenza online'
+    };
+
+    if (sourceField && sourceMap[internalPath]) sourceField.value = sourceMap[internalPath];
+    if (serviceSelect && serviceMap[internalPath]) serviceSelect.value = serviceMap[internalPath];
+  } catch (error) {
+    // Il modulo resta pienamente utilizzabile anche senza riconoscere la pagina di provenienza.
+  }
 
   contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
