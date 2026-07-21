@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Geometra a Venafro | Studio Tecnico D'Andrea</title>
   <meta name="description" content="Studio tecnico a Venafro per sanatorie edilizie, conformità urbanistica e catastale, CILA, SCIA, perizie, stime e consulenze tecniche anche online.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://studiotecnicodandrea.it/">
-  <link rel="icon" href="/favicon-96.png?v=2" type="image/png" sizes="96x96">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" sizes="180x180">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
   <link rel="stylesheet" href="assets/style.css">
   <meta property="og:locale" content="it_IT">
   <meta property="og:type" content="website">
@@ -26,10 +28,31 @@
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
+    "@id": "https://studiotecnicodandrea.it/#studio",
     "name": "Studio Tecnico D'Andrea",
     "url": "https://studiotecnicodandrea.it/",
-    "logo": "https://studiotecnicodandrea.it/logo-studio-tecnico-dandrea.png",
-    "image": "https://studiotecnicodandrea.it/massimo-dandrea-studio.webp",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://studiotecnicodandrea.it/logo-studio-tecnico-dandrea-square.png",
+      "width": 512,
+      "height": 512
+    },
+    "image": {
+      "@type": "ImageObject",
+      "@id": "https://studiotecnicodandrea.it/#ritratto-massimo-dandrea",
+      "url": "https://studiotecnicodandrea.it/geom-massimo-dandrea-studio-2026.jpg",
+      "contentUrl": "https://studiotecnicodandrea.it/geom-massimo-dandrea-studio-2026.jpg",
+      "width": 900,
+      "height": 1200,
+      "caption": "Geom. Massimo D'Andrea nel suo studio tecnico"
+    },
+    "founder": {
+      "@type": "Person",
+      "@id": "https://studiotecnicodandrea.it/#massimo-dandrea",
+      "name": "Geom. Massimo D'Andrea",
+      "jobTitle": "Geometra",
+      "image": { "@id": "https://studiotecnicodandrea.it/#ritratto-massimo-dandrea" }
+    },
     "foundingDate": "2002",
     "telephone": "+39 347 961 8016",
     "email": "studiotecnicogeomdandrea@gmail.com",
@@ -54,6 +77,17 @@
       "Pratiche paesaggistiche",
       "Consulenza tecnica online"
     ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://studiotecnicodandrea.it/#webpage",
+    "url": "https://studiotecnicodandrea.it/",
+    "name": "Geometra a Venafro | Studio Tecnico D'Andrea",
+    "mainEntity": { "@id": "https://studiotecnicodandrea.it/#studio" },
+    "primaryImageOfPage": { "@id": "https://studiotecnicodandrea.it/#ritratto-massimo-dandrea" }
   }
   </script>
   <script type="application/ld+json">
@@ -282,7 +316,7 @@
     <section class="section" id="studio">
       <div class="container profile-grid">
         <figure class="profile-media">
-          <img src="massimo-dandrea-studio.webp" width="900" height="1200" alt="Il Geometra Massimo D'Andrea nel suo studio tecnico">
+          <img src="geom-massimo-dandrea-studio-2026.jpg" width="900" height="1200" alt="Geom. Massimo D'Andrea nel suo studio tecnico a Venafro">
           <figcaption class="profile-stamp">
             <strong>Geom. Massimo D'Andrea</strong>
             <span>Studio tecnico fondato nel 2002</span>
